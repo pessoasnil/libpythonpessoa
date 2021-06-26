@@ -3,8 +3,9 @@ python:
   - 3.9
   - 3.8
 install:
-  - pip install -q -r requirements-dev.txt
+  - pip install -q -r requirements-dev.txt codecov
 script:
   - flake8
-  - pytest libpythonpessoa
-
+  - pytest libpythonpessoa/ --cov=libpythonpessoa
+after_success:
+  -codecov
