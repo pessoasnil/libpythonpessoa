@@ -7,7 +7,7 @@ Link do curso [Python Pro](https://www.python.pro.br/)
 
 [![Build Status](https://travis-ci.com/pessoasnil/libpythonpessoa.svg?branch=main)](https://travis-ci.com/pessoasnil/libpythonpessoa)
 [![Updates](https://pyup.io/repos/github/pessoasnil/libpythonpessoa/shield.svg)](https://pyup.io/repos/github/pessoasnil/libpythonpessoa/)
-
+[![codecov](https://codecov.io/gh/pessoasnil/libpythonpro/branch/master/graph/badge.svg?token=W1S65KY8W0)](https://codecov.io/gh/pessoasnil/libpythonpro)
 Suportada a versão 3.8 de Pyyhon
 
 Tópicos a serem Abordados:
@@ -26,7 +26,7 @@ Comando importantes do Pyenv:
     3. pyenv versions (Versões disponiveis nele)
     4. pyenv global (Versão escolhida)
 
-Comando importantes do Pip, python e linux:
+Comando importantes do Pip, python, pytest, cov e linux:
 
     1. pip  freeze(checar bibliotecas instaladas )
     2. pip  freeze > requiremensts.txt(arquivo para ficar na raiz que vai difinir dependencias do projeto )
@@ -39,6 +39,7 @@ Comando importantes do Pip, python e linux:
     8. python setup.py sdist(Crita um diretorio com a minha distribuição)
     9. pip install twine(lib para fazer a fazer a publicação dp projeto no pypi.org)
     10.twine upload dist/*( para mandar tudo que eu tendro do meu projeto)
+    11.pytest libpythonpessoa/ --cov=libpythonpessoa(checa com a lib cov, os teste cobridos)
 
 
 Comando importantes dentro do.venv:

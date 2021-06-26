@@ -11,6 +11,11 @@ pluggy==0.13.1
 pytest==6.2.4
 pluggy==0.13.1
 pyparsing==2.4.7
+
+#Converage
+coverage==5.5
+pytest-cov==2.12.1
+
 -r requirements.txt
 
 
