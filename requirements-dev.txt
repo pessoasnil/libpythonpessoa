@@ -3,7 +3,7 @@ mccabe==0.6.1
 pycodestyle==2.7.0
 pyflakes==2.3.1
 #Deps do pytest
-py=>1.8.2
+py==1.8.2
 iniconfig==1.1.1
 mccabe==0.6.1
 attrs==21.2.0
@@ -15,7 +15,6 @@ pyparsing==2.4.7
 #Converage
 coverage==5.5
 pytest-cov==2.12.1
-
 -r requirements.txt
 
 
