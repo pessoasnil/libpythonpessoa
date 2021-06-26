@@ -9,7 +9,7 @@ class Sessao:
         return self.usuarios
 
     def roll_back(self):
-        pass
+        return self.usuarios.clear()
 
     def fechar(self):
         pass
@@ -21,3 +21,4 @@ class Conexao:
 
     def fechar(self):
         pass
+
