@@ -18,20 +18,18 @@ class EnviadorMock(Enviador):
         self.qtd_email_eviados += 1
 
 
-
 @pytest.mark.parametrize(
     'usuarios',
     [
         [
-            Usuario(nome='Lins',email='pessoasnil@gmail.com'),
-            Usuario(nome='Pessoa',email='pessoa@gmail.com')
+            Usuario(nome='Lins', email='pessoasnil@gmail.com'),
+            Usuario(nome='Pessoa', email='pessoa@gmail.com')
         ],
         [
-            Usuario(nome='Lins',email='pessoasnil@gmail.com')
+            Usuario(nome='Lins', email='pessoasnil@gmail.com')
         ]
     ]
 )
-
 def test_qde_de_spam(sessao, usuarios):
     for usuario in usuarios:
         sessao.salvar(usuario)
@@ -40,12 +38,12 @@ def test_qde_de_spam(sessao, usuarios):
     enviador_de_spam.enviar_email('pessoasnil@gmail.com',
                                   'Curso de Python',
                                   'Confira os modulos fantasticos'
-     )
+                                  )
     assert len(usuarios) == enviador.enviar.call_count
 
 
 def test_parametros_spam(sessao):
-    usuario= Usuario(nome='Lins', email='pessoasnil@gmail.com')
+    usuario = Usuario(nome='Lins', email='pessoasnil@gmail.com')
     sessao.salvar(usuario)
     enviador = Mock()
     enviador_de_spam = EnviadorDeSpam(sessao, enviador)
@@ -53,24 +51,10 @@ def test_parametros_spam(sessao):
         'pessoasnil@gmail.com',
         'Curso de Python',
         'Confira os modulos fantasticos'
-     )
-    enviador.enviar.assert_called_once_with (
+    )
+    enviador.enviar.assert_called_once_with(
         'pessoasnil@gmail.com',
         'pessoa@gmail.com',
         'Curso de Python'
         'Confira os modulos fantasticos'
     )
-
-
-
-
-
-
-
-
-
-
-
-
-
-
